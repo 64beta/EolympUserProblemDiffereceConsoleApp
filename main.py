@@ -18,13 +18,13 @@ def funset(User):
 
 user = "beta64"
 print("diff\nrld")
-b = funset(user)
+coreUser = funset(user)
 while(True):
     command = input("COMMAND : ")
     if command == "diff":
         a = funset(input("USER : "))
 
-        oop = a.difference(b)
+        oop = a.difference(coreUser)
 
         print(len(oop))
         for i in oop:
@@ -37,4 +37,20 @@ while(True):
 
             print("https://www.eolymp.com/az/problems/" + r)
     elif command == "rld":
-        b = funset(user)
+        coreUser = funset(user)
+    elif command == "diff2":
+        a = funset(input("Core USER : "))
+        b = funset(input("Target USER : "))
+
+        oop = b.difference(a)
+
+        print(len(oop))
+        for i in oop:
+            r = ""
+            for z in i:
+                if z.isalnum():
+                    r += z
+                else:
+                    break
+
+            print("https://www.eolymp.com/az/problems/" + r)
