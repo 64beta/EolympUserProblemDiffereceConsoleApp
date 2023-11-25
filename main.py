@@ -1,6 +1,4 @@
 import Services.services
-import Functions.EolympFunctions
-
 
 print("diff\nrld\ndiff2")
 

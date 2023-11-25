@@ -17,12 +17,6 @@ def DiffWithSelectedProfiles():
     oop = b.difference(a)
     Cout(oop)
 
-
-
-
-
-
-
 #for User Interface
 def Cout(oop):
     print(len(oop))
