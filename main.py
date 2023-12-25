@@ -10,3 +10,6 @@ while(True):
         Services.services.Reload()
     elif command == "diff2":
         Services.services.DiffWithSelectedProfiles()
+    elif command == "diffg":
+        Services.services.DiffWithGroupProfiles()
+

@@ -1,6 +1,6 @@
 import requests
 def SolvedProblems(User):
-    a = {1}
+    a = set()
     url = f'https://www.eolymp.com/az/users/{User}/punchcard'
     response = requests.get(url)
     html_ = response.text

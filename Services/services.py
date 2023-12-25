@@ -4,8 +4,8 @@ import Profiles.EolympProfiles
 def Diff():
         a = Functions.EolympFunctions.SolvedProblems(input("USER : "))
 
-        oop = a.difference(Profiles.EolympProfiles.coreUser)
-        Cout(oop)
+        Result = a.difference(Profiles.EolympProfiles.coreUser)
+        Cout(Result)
 
 def Reload():
     Profiles.EolympProfiles.coreUser = Functions.EolympFunctions.SolvedProblems(Profiles.EolympProfiles.user)
@@ -14,8 +14,21 @@ def DiffWithSelectedProfiles():
     a = Functions.EolympFunctions.SolvedProblems(input("Core USER : "))
     b = Functions.EolympFunctions.SolvedProblems(input("Target USER : "))
 
-    oop = b.difference(a)
-    Cout(oop)
+    Result = b.difference(a)
+    Cout(Result)
+def DiffWithGroupProfiles():
+    oop = set()
+    while(True):
+        a = input("Prompt : ")
+        if a == "0":
+            break
+        else:
+            for i in Functions.EolympFunctions.SolvedProblems(a):
+                oop.add(i)
+    Result = oop.difference(Profiles.EolympProfiles.coreUser)
+    Cout(Result)
+
+
 
 #for User Interface
 def Cout(oop):
