@@ -1,4 +1,23 @@
 import requests
+from bs4 import BeautifulSoup
+
+def Rank(User):
+
+    url = f'https://www.eolymp.com/az/users/{User}'
+    response = requests.get(url)
+
+    soup = BeautifulSoup(response.content, 'html.parser')
+
+    xpath_expression = 'body > main > div:nth-child(2) > div:nth-child(3) > div:nth-child(2) > div > div:nth-child(1) > div > div'
+    div_element = soup.select_one(xpath_expression)
+    try:
+        a = div_element.text
+        return a
+    except:
+        return ""
+
+
+
 def SolvedProblems(User):
     a = set()
     url = f'https://www.eolymp.com/az/users/{User}/punchcard'

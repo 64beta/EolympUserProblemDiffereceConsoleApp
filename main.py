@@ -1,6 +1,6 @@
 import Services.services
 
-print("diff\nrld\ndiff2")
+print("diff\nrld\ndiff2\ndiffg")
 
 while(True):
     command = input("COMMAND : ")
