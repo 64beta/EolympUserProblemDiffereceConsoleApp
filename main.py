@@ -1,6 +1,6 @@
 import Services.services
 
-print("diff\nrld\ndiff2\ndiffg")
+print("diff\nrld\ndiff2\ndiffg\nranklist")
 
 while(True):
     command = input("COMMAND : ")
@@ -12,4 +12,6 @@ while(True):
         Services.services.DiffWithSelectedProfiles()
     elif command == "diffg":
         Services.services.DiffWithGroupProfiles()
+    elif command == "ranklist":
+        Services.services.PotentialRivalRankList()
 
